@@ -1,8 +1,8 @@
-package lap_02;
+package lab_02;
 
 import java.util.Scanner;
 
-public class Lap22 {
+public class Lab22 {
     public static void main(String[] args) {
         // Allow user to input a number, print out it's an odd or even number
         Scanner scanner = new Scanner(System.in);

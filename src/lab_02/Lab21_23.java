@@ -1,9 +1,9 @@
-package lap_02;
+package lab_02;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Lap21_23 {
+public class Lab21_23 {
     public static void main(String[] args) {
         // Get input from user about height(m) and weight(kg) then calculate BMI
         // Underweight = <18.5
@@ -22,17 +22,17 @@ public class Lap21_23 {
         System.out.println("BMI = " + decimalFormat.format(BMI)); //làm tròn BMI
         if(BMI < 18.5){
             System.out.println("=> Thiếu cân");
-            newWeight = 18.5f * height * height - weight; //tính cân chạm mốc bình thường
+            newWeight = 18.5f * height * height - weight; //tính cân chạm min mốc bình thường
             System.out.println("=> Cần tăng ít nhất: " + decimalFormat.format(newWeight) + " cân");
         }else if (BMI <= 24.9){
             System.out.println("=> Bình thường");
         }else if (BMI <= 29.9){
             System.out.println("=> Thừa cân");
-            newWeight = weight - 24.9f * height * height;
+            newWeight = weight - 24.9f * height * height; //tính cân chạm max mốc bình thường
             System.out.println("=> Cần giảm ít nhất: " + decimalFormat.format(newWeight) + " cân");
         }else {
             System.out.println("=> Béo phì");
-            newWeight = weight - 24.9f * height * height;
+            newWeight = weight - 24.9f * height * height; //tính cân chạm max mốc bình thường
             System.out.println("=> Cần giảm ít nhất: " + decimalFormat.format(newWeight) + " cân");
         }
     }
