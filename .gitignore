@@ -3,4 +3,4 @@
 .gitattributes
 README.md
 appium-basic-k6.iml
-out/production/appium-basic-k6
+.out/
