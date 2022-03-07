@@ -1,4 +1,5 @@
+.gitignore
 .idea
 .gitattributes
-.appium-basic-k6.iml
-.README.md
+README.md
+appium-basic-k6.iml
