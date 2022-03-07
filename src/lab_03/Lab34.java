@@ -3,32 +3,26 @@ package lab_03;
 //Merge 2 SORTED integer array into one SORTED array
 public class Lab34 {
     public static void main(String[] args) {
-        int [] a = {1, 12, 16, 28, 34};
-        int [] b = {1, 13, 16, 27, 99};
-        // merge a & b = c
-        int a1 = a.length, b1 = b.length;
-        int c1 = a1 + b1;
-        int [] c = new int [c1];
-        for (int i = 0; i < a1; i++){
-            c[i] = a[i];
-        }
-        for (int j = 0; j<b1; j++) {
-            c[a1+j] = b[j];
-        }
-        // sort c
-        int temp;
-        for (int k = 0; k < c1; k++) {
-            for (int l = k+1; l < c1; l++) {
-                if(c[k] > c[l]) {
-                    temp = c[k];
-                    c[k] = c[l];
-                    c[l] = temp;
-                }
+        int [] array1 = {1, 28, 34};
+        int [] array2 = {1, 13, 16, 27, 99};
+        int [] merged = new int [array1.length+ array2.length];
+        int a1Index = 0, a2Index = 0, mIndex = 0;
+
+        while(a1Index < array1.length && a2Index < array2.length){
+            if (array1[a1Index] < array2[a2Index]){
+                merged[mIndex++] = array1[a1Index++];
+            } else {
+                merged[mIndex++] = array2[a2Index++];
             }
         }
-        System.out.println("Mảng sau khi merge: ");
-        for (int m: c){
-            System.out.print(m+ " ");
+        if (a1Index < array1.length){
+            merged[mIndex++] = array1[a1Index++];
+        }
+        if (a2Index < array2.length){
+            merged[mIndex++] = array2[a2Index++];
+        }
+        for (int value : merged) {
+            System.out.print(value + " ");
         }
     }
 }
