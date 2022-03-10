@@ -55,9 +55,6 @@ public class lab_05 {
                     isContinuing = false;
                     System.out.println("Exit!");
                     break;
-                default:
-                    isContinuing = false;
-                    System.out.println("Wrong option. Goodbye!!");
             }
         }
     }
