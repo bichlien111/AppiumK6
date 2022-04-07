@@ -1,6 +1,6 @@
 package lab_11;
 
-public class NormalLogin implements ILogin{
+public class NormalLogin implements ILogin {
     @Override
     public void login() {
         System.out.println("NormalLogin Type");

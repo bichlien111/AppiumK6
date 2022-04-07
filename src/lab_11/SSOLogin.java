@@ -1,6 +1,6 @@
 package lab_11;
 
-public class SSOLogin implements ILogin{
+public class SSOLogin implements ILogin {
     @Override
     public void login() {
         System.out.println("SSOLogin Type");
